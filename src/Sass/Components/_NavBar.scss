@@ -1,0 +1,77 @@
+@import '../base/variables';
+
+.NavBarContainer{
+    //background-color: var(--red);
+    height: 130px;
+    .Bar{
+        display: flex;
+        background-color: $black;
+        margin: 0 7%;
+        border-radius: 75px;
+        height: 85%;
+        align-items: center;
+
+
+        .Navs{
+            
+            display: flex;
+            margin: 0 100px;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+
+            .Logo{
+
+                h1{
+                    color: $white;
+                }
+                
+            }
+
+            
+            .Icons{
+                display: flex;
+                //background-color: cyan;
+                //padding-right: 50px;
+
+                div{
+                    //background-color: var(--white);
+                    color: $white;
+                    padding: 10px 15px;
+                    margin: 0 20px;
+                    border-radius: 50px;
+                    //border: solid var(--blackLight) 1px ;
+
+                    &:hover{
+                        color: $orange;
+                        background-color: $blackLight;
+                    }
+                }
+                @include breakpoint(md){
+                    display: none;
+                }
+            }
+            .IconsMovile{
+                display: none;
+            
+                
+
+            @include breakpoint(md){
+                display: flex;
+                background-color: $red;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                .Menu{
+                    color: $white;
+                    font-size: 20px;
+                    
+
+                }
+            }
+            }
+        }
+    }
+}
