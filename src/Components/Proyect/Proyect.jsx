@@ -2,7 +2,9 @@ import React from 'react'
 
 const Proyect = () => {
   return (
-    <div className='Proyects'>Proyect</div>
+    <div className='Proyects'>
+      <dir ></dir>
+    </div>
   )
 }
 

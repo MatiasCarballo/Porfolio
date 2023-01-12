@@ -60,7 +60,6 @@
                     padding: 10px 15px;
                     margin: 0 20px;
                     border-radius: 50px;
-                    
 
                     &:hover{
                         color: $orange;
@@ -122,3 +121,72 @@
         }
     }
 }
+
+.NavBarContainerN{
+    
+    position: fixed;
+    background-color: $black;
+    height: 60vh;
+    width: 5vw;
+    top:20vh;
+    left: 5px;
+    border-radius: 50px;
+
+    
+    .IconsN{
+        //background-color: rgb(107, 104, 104);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100px;
+        //transition: all 0.5s  ease-in-out;
+        
+        .direction{
+
+            .IconN{
+                
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+            }
+            .IconN1{
+                display: none;
+            }
+        }   
+    
+    }   
+
+
+
+    &:hover{
+        width: 10vw;
+        transition: 0.4s;
+        .IconsN{
+            .direction{
+                display: flex;
+                border-radius: 5px;
+                padding: 2px;
+                justify-content: center;
+                align-items: center;
+                
+                    .IconN{
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .IconN1{
+
+                        display: flex;
+                        padding-left: 5px;
+                        //transition: 2s;
+                    } 
+                &:hover{
+                    background-color: $blackLight;
+                    color: $orange;
+                }
+                
+                }
+
+        }
+    }
+}   

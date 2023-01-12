@@ -4,6 +4,8 @@ import './Sass/style.scss'
 import NavBar from "./Components/NavBar/NavBar";
 import Home from './Components/Home/Home.jsx'
 import Proyect from './Components/Proyect/Proyect.jsx'
+import Contact from './Components/Contact/Contact';
+import AboutMe from './Components/AboutMe/AboutMe';
 
 
 function App() {
@@ -15,8 +17,18 @@ function App() {
         {/* <Route path="/" element={<Proyect/>} /> */}
         
       {/* </Routes> */}
-      <Home/>
-      <Proyect/>
+      <div id='Home'>
+        <Home />
+      </div>
+      <div id='AboutMe'>
+        <AboutMe/>
+      </div>
+      <div id='Proyect'>
+        <Proyect />
+      </div>
+      <div id='Contact'>
+        <Contact/>
+      </div>
     </div>
   );
 }
