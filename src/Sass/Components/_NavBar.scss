@@ -1,8 +1,14 @@
 @import '../base/variables';
 
 .NavBarContainer{
-    //background-color: var(--red);
     height: 130px;
+    @include breakpoint(md){
+        height: 110px;
+    }
+
+    @include breakpoint2(md){
+        height: 100px;
+    }
     .Bar{
         display: flex;
         background-color: $black;
@@ -10,7 +16,7 @@
         border-radius: 75px;
         height: 85%;
         align-items: center;
-
+  
 
         .Navs{
             
@@ -19,6 +25,22 @@
             justify-content: space-between;
             width: 100%;
             align-items: center;
+            
+            @include breakpoint(md){
+                display: flex;
+                margin: 0 70px;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+            }
+
+            @include breakpoint2(md){
+                display: flex;
+                margin: 0 40px;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+            }
 
             .Logo{
 
@@ -31,16 +53,14 @@
             
             .Icons{
                 display: flex;
-                //background-color: cyan;
-                //padding-right: 50px;
 
                 div{
-                    //background-color: var(--white);
+                    
                     color: $white;
                     padding: 10px 15px;
                     margin: 0 20px;
                     border-radius: 50px;
-                    //border: solid var(--blackLight) 1px ;
+                    
 
                     &:hover{
                         color: $orange;
@@ -53,24 +73,51 @@
             }
             .IconsMovile{
                 display: none;
-            
-                
 
-            @include breakpoint(md){
-                display: flex;
-                background-color: $red;
-                justify-content: center;
-                align-items: center;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                .Menu{
-                    color: $white;
-                    font-size: 20px;
-                    
+                @include breakpoint(md){
+                    display: flex;
+                    background-color: $red;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    padding-top: 1px;
+                    border-radius: 50%;
+                        .Menu{
+                            color: $white;
+                            font-size: 20px;
 
+                            .MenuMovil{
+                                position: absolute;
+                                background-color: $blackLight;
+                                height: 6.8em;
+                                width: 9em;
+                                right: 95px;
+                                top:75px;
+                                border-radius: 15px;
+                                border: solid $orange 1px;
+                                padding-top: 0.9em;
+
+                                h3{
+                                    display: flex;
+                                    justify-content: center;
+                                    
+                                }
+                            }
+                        }
                 }
-            }
+                @include breakpoint2(md){
+                    .Menu{
+                       .MenuMovil{
+                            padding-top: 0.9em;
+                            top:70px;
+                            right: 65px;
+                            height: 6.5em;
+                            width: 8.35em;
+                        } 
+                    }
+                    
+                }
             }
         }
     }

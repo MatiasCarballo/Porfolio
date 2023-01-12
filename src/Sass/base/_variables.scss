@@ -1,15 +1,23 @@
 $white:#dedddf;
 $red: #eb194a;
 $orange:#eb5b19;
-$blackLight:#292826;
+$blackLight:#2e2d2a;
 $black:#232323;
 
 
 $md: 900px;
+$mdM: 400px;
 
 @mixin breakpoint($point) {
     @if md == $point {
         @media (max-width: $md) {
+            @content;
+        }
+    }
+}
+@mixin breakpoint2($point) {
+    @if md == $point {
+        @media (max-width: $mdM) {
             @content;
         }
     }
