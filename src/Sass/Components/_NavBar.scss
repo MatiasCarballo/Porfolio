@@ -21,7 +21,7 @@
         .Navs{
             
             display: flex;
-            margin: 0 100px;
+            margin: 0 70px;
             justify-content: space-between;
             width: 100%;
             align-items: center;
@@ -57,13 +57,18 @@
                 div{
                     
                     color: $white;
-                    padding: 10px 15px;
+                    padding: 10px 10px;
                     margin: 0 20px;
                     border-radius: 50px;
 
                     &:hover{
-                        color: $orange;
-                        background-color: $blackLight;
+                        h3 a{
+                            color: $orange;
+                            background-color: $blackLight; 
+                            padding: 3px 5px;
+                            border-radius: 50px;
+                        }
+                        
                     }
                 }
                 @include breakpoint(md){
@@ -132,6 +137,9 @@
     left: 5px;
     border-radius: 50px;
 
+    @include breakpoint2(md){
+        width: 7.5vw;
+    }
     
     .IconsN{
         //background-color: rgb(107, 104, 104);
@@ -139,7 +147,7 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        height: 100px;
+        height: 15vh;
         //transition: all 0.5s  ease-in-out;
         
         .direction{
@@ -162,6 +170,11 @@
     &:hover{
         width: 10vw;
         transition: 0.4s;
+
+        @include breakpoint2(md){
+            width: 30vw;
+        }
+
         .IconsN{
             .direction{
                 display: flex;
