@@ -55,18 +55,14 @@
                 display: flex;
 
                 div{
-                    
                     color: $white;
-                    padding: 10px 10px;
-                    margin: 0 20px;
+                    padding: 10px 15px;
+                    margin: 5px 20px;
                     border-radius: 50px;
-
                     &:hover{
+                        background-color: $blackLight; 
                         h3 a{
                             color: $orange;
-                            background-color: $blackLight; 
-                            padding: 3px 5px;
-                            border-radius: 50px;
                         }
                         
                     }
