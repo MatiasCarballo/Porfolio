@@ -1,5 +1,5 @@
 import './Sass/style.scss'
-//import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import NavBar from "./Components/NavBar/NavBar";
 import Home from './Components/Home/Home.jsx'
@@ -12,23 +12,11 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      {/* <Routes> */}
-        {/* <Route path="/" element={<Home/>} /> */}
-        {/* <Route path="/" element={<Proyect/>} /> */}
+      <Routes>
+        <Route path="/home" element={<Home/>} />
+        <Route path="/proyect" element={<Proyect/>} />
         
-      {/* </Routes> */}
-      <div id='Home'>
-        <Home />
-      </div>
-      <div id='AboutMe'>
-        <AboutMe/>
-      </div>
-      <div id='Proyect'>
-        <Proyect />
-      </div>
-      <div id='Contact'>
-        <Contact/>
-      </div>
+      </Routes>
     </div>
   );
 }

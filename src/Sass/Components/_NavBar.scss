@@ -1,201 +1,99 @@
 @import '../base/variables';
 
-.NavBarContainer{
-    height: 130px;
+   // height: 130px;
+   // @include breakpoint(md){
+   //     height: 110px;
+   // }
+
+   // @include breakpoint2(md){
+   //     height: 100px;
+   // }
+
+.ContainerNavBar{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    position: fixed;
+    //background-color: aqua;
+    height: 100vh;
+    width: 10em;
+    // justify-content: center;
+    align-items: center;
+
     @include breakpoint(md){
-        height: 110px;
+        //position: fixed;
+        bottom: 0px;
+        height: 5em;
+        width: 100%; 
+        justify-content: center;
     }
 
-    @include breakpoint2(md){
-        height: 100px;
-    }
-    .Bar{
+    .NavBar{
         display: flex;
-        background-color: $black;
-        margin: 0 7%;
-        border-radius: 75px;
-        height: 85%;
-        align-items: center;
-  
+        flex-direction: column;
+        background-color: $blackLight;
+        height: 80%;
+        width: 50%;
+        border-radius: 20px;
 
-        .Navs{
+        @include breakpoint(md){
+            flex-direction: row;
+            width: 75%;
             
+            align-items: center;
+        }
+
+        .ContainerLogo{
             display: flex;
-            margin: 0 70px;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 30%;
+            
+            .LogoNavBar{
+                width: 3.7em;
+                height: 3.7em;
+                border-radius: 50%;
+                border: 1px solid $white;
+                margin-top: 1em;
+            }
+
+            .NameNavBar{
+                text-align: center;
+                color: $white;
+            }
+            @include breakpoint(md){
+                display: none;
+            }
+        }
+
+    
+        .ContainerItem{
+            display: flex;
+            flex-direction: column;
+            height: 65%;
             width: 100%;
+            justify-content: space-around;
             align-items: center;
             
+
+            .Item{
+                display: flex;
+                //background-color: chartreuse;
+                height: 2.5em;
+                width: 2.5em;
+                border: 1px solid $white;
+                border-radius: 25%;
+            }
             @include breakpoint(md){
-                display: flex;
-                margin: 0 70px;
-                justify-content: space-between;
-                width: 100%;
-                align-items: center;
-            }
-
-            @include breakpoint2(md){
-                display: flex;
-                margin: 0 40px;
-                justify-content: space-between;
-                width: 100%;
-                align-items: center;
-            }
-
-            .Logo{
-
-                h1{
-                    color: $white;
-                }
+                flex-direction: row;
                 
-            }
-
-            
-            .Icons{
-                display: flex;
-
-                div{
-                    color: $white;
-                    padding: 10px 15px;
-                    margin: 5px 20px;
-                    border-radius: 50px;
-                    &:hover{
-                        background-color: $blackLight; 
-                        h3 a{
-                            color: $orange;
-                        }
-                        
-                    }
-                }
-                @include breakpoint(md){
-                    display: none;
-                }
-            }
-            .IconsMovile{
-                display: none;
-
-                @include breakpoint(md){
-                    display: flex;
-                    background-color: $red;
-                    justify-content: center;
-                    align-items: center;
-                    width: 50px;
-                    height: 50px;
-                    padding-top: 1px;
-                    border-radius: 50%;
-                        .Menu{
-                            color: $white;
-                            font-size: 20px;
-
-                            .MenuMovil{
-                                position: absolute;
-                                background-color: $blackLight;
-                                height: 6.8em;
-                                width: 9em;
-                                right: 95px;
-                                top:75px;
-                                border-radius: 15px;
-                                border: solid $orange 1px;
-                                padding-top: 0.9em;
-
-                                h3{
-                                    display: flex;
-                                    justify-content: center;
-                                    
-                                }
-                            }
-                        }
-                }
-                @include breakpoint2(md){
-                    .Menu{
-                       .MenuMovil{
-                            padding-top: 0.9em;
-                            top:70px;
-                            right: 65px;
-                            height: 6.5em;
-                            width: 8.35em;
-                        } 
-                    }
-                    
-                }
+                justify-content: space-around;
+                
+                
             }
         }
     }
+
+
 }
-
-.NavBarContainerN{
-    
-    position: fixed;
-    background-color: $black;
-    height: 60vh;
-    width: 5vw;
-    top:20vh;
-    left: 5px;
-    border-radius: 50px;
-
-    @include breakpoint2(md){
-        width: 7.5vw;
-    }
-    
-    .IconsN{
-        //background-color: rgb(107, 104, 104);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        height: 15vh;
-        //transition: all 0.5s  ease-in-out;
-        
-        .direction{
-
-            .IconN{
-                
-                width: 20px;
-                height: 20px;
-                border-radius: 5px;
-            }
-            .IconN1{
-                display: none;
-            }
-        }   
-    
-    }   
-
-
-
-    &:hover{
-        width: 10vw;
-        transition: 0.4s;
-
-        @include breakpoint2(md){
-            width: 30vw;
-        }
-
-        .IconsN{
-            .direction{
-                display: flex;
-                border-radius: 5px;
-                padding: 2px;
-                justify-content: center;
-                align-items: center;
-                
-                    .IconN{
-                        width: 20px;
-                        height: 20px;
-                    }
-                    .IconN1{
-
-                        display: flex;
-                        padding-left: 5px;
-                        //transition: 2s;
-                    } 
-                &:hover{
-                    background-color: $blackLight;
-                    color: $orange;
-                }
-                
-                }
-
-        }
-    }
-}   
