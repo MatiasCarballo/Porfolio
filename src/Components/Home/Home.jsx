@@ -2,10 +2,13 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='Home'>
-      <dir >
+    <div className='ContainerHome'>
+      <div className='ContainerCirculo'>
+        <div className='CirculoHome'>
         
-      </dir>
+        </div>
+      </div>
+      
     </div>
   )
 }
