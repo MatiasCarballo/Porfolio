@@ -16,6 +16,7 @@
         justify-content: center;
         height: 5em;
         width: 100%; 
+        padding: 0;
     }
 
         .Navigation{
@@ -26,13 +27,18 @@
             height: 80%;
             width: 50%;
             align-items: center;
+            
         
             @include breakpoint(md){
-                width: 400px;
+                width: 300px;
                 height: 70px;   
                 justify-content: center;
                 position: relative;
                 align-items: center;
+            }
+
+            @include breakpoint2(md){
+                width: 210px;
             }
         
             .ContainerLogo{
@@ -71,9 +77,9 @@
                 @include breakpoint(md){
                     flex-direction: row;
                     height: 100%;
-                    width: 350px;//
+                    width: 210px;//
                     justify-content: center;////el center funciona hacendo los cuadrados de 70px esten uno al lado de otro 
-
+                    //background-color: aquamarine;
                 }
 
                 li{
@@ -94,7 +100,7 @@
                         border:none;
                     } 
 
-                    a{
+                    .linkNav{
                         position: absolute;
                         width: 60%;
                         height: 60%;
@@ -141,7 +147,7 @@
                     }
                 }
 
-                li.active a .icon{
+                li.active .linkNav .icon{
                     color: $orange;
                     
                     @include breakpoint(md){
@@ -149,7 +155,7 @@
                     }
                 }
 
-                li.active a .text{
+                li.active .linkNav .text{
 
                     @include breakpoint(md){
                         opacity: 1;
@@ -167,12 +173,12 @@
                     li:nth-child(3).active ~ .indicator{ 
                         transform: translateX(calc(70px * 2));
                     }
-                    li:nth-child(4).active ~ .indicator{ 
-                        transform: translateX(calc(70px * 3));
-                    }
-                    li:nth-child(5).active ~ .indicator{ 
-                        transform: translateX(calc(70px * 4));
-                    }
+                    //li:nth-child(4).active ~ .indicator{ 
+                    //    transform: translateX(calc(70px * 3));
+                    //}
+                    //li:nth-child(5).active ~ .indicator{ 
+                    //    transform: translateX(calc(70px * 4));
+                    //}
                 }
 
                 .indicator{
@@ -180,13 +186,16 @@
                     @include breakpoint(md){
                         position: absolute;
                         top: -38px;
-                        left: 58px;
+                        left: 45px;
                         width: 60px;
                         height: 60px;
                         background-color: darkcyan;
                         border-radius: 50%;
                         border: 6px solid $red;
                         transition: 0.5s;
+                    }
+                    @include breakpoint2(md){
+                        left: 0px;
                     }
                 }
 

@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const Proyect = () => {
+
+
   return (
     <div className='Proyects'>
       <dir ></dir>

@@ -6,7 +6,7 @@ $black:#232323;
 
 
 $md: 800px;
-$mdM: 400px;
+$mdM: 300px;
 
 @mixin breakpoint($point) {
     @if md == $point {

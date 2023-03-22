@@ -1,15 +1,19 @@
 import React, {useState} from 'react'
-import {BiHome, BiSave, BiWindowAlt, BiMessageDetail} from 'react-icons/bi'
+import {BiHome, BiSave, BiWindowAlt} from 'react-icons/bi'
+import { Link } from 'react-router-dom'
+
 
 const NavBar = () => {
     //se podria ver la direccion url para comparar y ver la cual esta active
-    const [active, setActive] = useState('home')
-
+    const currentURL = window.location.href
+    const lastSegment = currentURL.split('/').pop();
+    const [active, setActive] = useState(lastSegment);
+    
     const ItemActivo = (page)=>{
         setActive(page)
     }
 
-  return (//******************* */
+  return (
     <div className='ContainerNavigation'>
         <div className='Navigation'>
             <div className='ContainerLogo'>
@@ -17,30 +21,25 @@ const NavBar = () => {
           <h4 className='NameNavBar'>Matias Carballo</h4>
             </div>
             <ul>
-                <li className={`list ${active === 'home' ? 'active' : ''}`} onClick={()=>{ItemActivo('home')}}>
-                    <a href="#home">
+                <li className={`list ${active === '' ? 'active' : ''}`} onClick={()=>{ItemActivo('')}}>
+                    <Link to="/" className='linkNav'>
                         <span className='icon'><BiHome/></span>
                         <span className='text'>Home</span>
-                    </a>
+                    </Link>
                 </li>
-                <li className={`list ${active === 'home1' ? 'active' : ''}`} onClick={()=>{ItemActivo('home1')}}>
-                    <a href="#home">
+                <li className={`list ${active === 'proyect' ? 'active' : ''}`} onClick={()=>{ItemActivo('proyect')}}>
+                    <Link to="/proyect" className='linkNav'>
                         <span className='icon'><BiSave/></span>
                         <span className='text'>Home1</span>
-                    </a>
+                    </Link>
                 </li>
-                <li className={`list ${active === 'home2' ? 'active' : ''}`} onClick={()=>{ItemActivo('home2')}}>
-                    <a href="#home">
+                <li className={`list ${active === 'contact' ? 'active' : ''}`} onClick={()=>{ItemActivo('contact')}}>
+                    <Link to="/contact" className='linkNav'>
                         <span className='icon'><BiWindowAlt/></span>
                         <span className='text'>Home2</span>
-                    </a>
+                    </Link>
                 </li>
-                <li className={`list ${active === 'home3' ? 'active' : ''}`} onClick={()=>{ItemActivo('home3')}}>
-                    <a href="#home">
-                        <span className='icon'><BiMessageDetail/></span>
-                        <span className='text'>Home3</span>
-                    </a>
-                </li>
+
                 <div className='indicator'></div>
             </ul>
         </div>
