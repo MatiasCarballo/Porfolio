@@ -1,4 +1,23 @@
-.AboutMeCont{
-    background-color: dodgerblue;
+.ContainerAbout{
+    
+    .DesignAboutMe{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
 
+        .AboutMe{
+            width: 80%;
+            height: 80%;
+            background-color: aquamarine;
+
+
+            .Title{
+                color: aliceblue;
+                background-color: blueviolet;
+            }
+
+            
+        }
+    }
 }

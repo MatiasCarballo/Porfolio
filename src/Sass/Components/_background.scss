@@ -126,6 +126,9 @@
     overflow: hidden;
     height: 100vh;
     width: 100%;
+    z-index: -10;
+    position: fixed;
+
 
     i{
         position: absolute;
@@ -154,6 +157,6 @@
         transform: translateY(-200px);
     }
     100%{
-        transform: translateY(calc(100vh - 150px));
+        transform: translateY(calc(100vh + 200px));
     }
 }
