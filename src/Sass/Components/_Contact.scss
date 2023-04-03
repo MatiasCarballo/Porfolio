@@ -124,6 +124,31 @@
                         background-position-x:300px ;
                     }
                 }
+                @keyframes colors2 {
+                    0%{
+                        background-position-x:0 ;
+                    }
+                    100%{
+                        background-position-x:141px ;
+                    }
+                }
+
+                .ButtomContact{
+                    color: #8f8f8f;
+                    font-size: 0.9em;
+                    padding: 10px 50px;
+                    background: transparent;
+                    border-radius: 5px;
+                    border: solid 2px #8f8f8f;
+                }
+
+                .ButtomContact:hover{
+                    background: linear-gradient(90deg, #ff1b69, #ff0, #2196f3, #9c27b0,#ff1b69);
+                    animation: colors2 2s linear infinite;  
+                    color: #000000;
+                    border: solid 2px #000000;
+                    font-size: 1em;
+                }
             }
             
 

@@ -39,10 +39,10 @@ const Contact = () => {
               <div className='InputBoxContact'>
                 {/* <input type="text" required='required' className='InputName' /> */}
                 <textarea className='TextName' name="message" placeholder='Mensaje'></textarea>
-                {/* <span className='NameContact'>Mensaje</span> */}
+                {/* <span className='NameTextContact'>Mensaje</span> */}
               </div>
               <div className='InputBoxContact'>
-                <input type="submit" value="Enviar" className=''/>
+                <input type="submit" value="Enviar" className='ButtomContact'/>
               </div>
           </dir>
       </form> 
